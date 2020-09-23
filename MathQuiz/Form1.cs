@@ -30,6 +30,7 @@ namespace MathQuiz
         int dividend;
         int divisor;
 
+        DateTime now = DateTime.Now;
 
 
         public MathQuiz()
@@ -42,6 +43,8 @@ namespace MathQuiz
             timesLeft = 30;
             timesLeftLabel1.Text = "30 second!!!";
             timer1.Start();
+
+            nowDate.Text = DateTime.Now.ToString("dd/MMMM/yyyy");
 
             addend1 = randomizer.Next(51);
             addend2 = randomizer.Next(51);
@@ -87,6 +90,7 @@ namespace MathQuiz
             {
                 timesLeft--;
                 timeLabel.Text = timesLeft + " seconds";
+
             }
             else
             {

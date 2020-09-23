@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MathQuiz));
             this.timeLabel = new System.Windows.Forms.Label();
             this.timesLeftLabel1 = new System.Windows.Forms.Label();
             this.plusLeftLabel = new System.Windows.Forms.Label();
@@ -53,6 +54,7 @@
             this.division = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.nowDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sum1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -284,12 +286,22 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // nowDate
+            // 
+            this.nowDate.Font = new System.Drawing.Font("SimSun", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.nowDate.Location = new System.Drawing.Point(151, 265);
+            this.nowDate.Name = "nowDate";
+            this.nowDate.Size = new System.Drawing.Size(184, 18);
+            this.nowDate.TabIndex = 22;
+            this.nowDate.Text = "label1";
+            // 
             // MathQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.nowDate);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.division);
             this.Controls.Add(this.multi);
@@ -314,9 +326,10 @@
             this.Controls.Add(this.timesLeftLabel1);
             this.Controls.Add(this.timeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MathQuiz";
-            this.Text = "Wei-Chun, Tang";
+            this.Text = "Wei-Chun, Tang - Math Quiz";
             ((System.ComponentModel.ISupportInitialize)(this.sum1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).EndInit();
@@ -352,6 +365,7 @@
         private System.Windows.Forms.Label division;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label nowDate;
     }
 }
 
